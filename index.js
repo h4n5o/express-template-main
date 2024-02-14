@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 // Use for development
 app.use(cors());
 
-app.use("/v1", MembersRouter);
+app.use("/v1", AppRouter);
 
 // App hört im folgenden auf den Port, welcher über die Umgebungsvariable definiert ist
 app.listen(PORT, () => {

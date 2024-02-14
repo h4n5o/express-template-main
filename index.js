@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const { AppRouter } = require("./src/routes");
+const { MembersRouter } = require("./src/routes/v1/members");
 
 
 // Zugriff auf Umgebungsvariablen
@@ -14,7 +15,7 @@ app.use(bodyParser.json());
 // Use for development
 app.use(cors());
 
-app.use("/v1", AppRouter);
+app.use("/v1", MembersRouter);
 
 // App hört im folgenden auf den Port, welcher über die Umgebungsvariable definiert ist
 app.listen(PORT, () => {

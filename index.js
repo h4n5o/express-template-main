@@ -17,7 +17,7 @@ app.use(cors());
 
 app.use("/v1", AppRouter);
 
-app.use(MembersRouter);
+app.get(MembersRouter);
 
 // App hört im folgenden auf den Port, welcher über die Umgebungsvariable definiert ist
 app.listen(PORT, () => {
